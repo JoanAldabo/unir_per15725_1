@@ -86,10 +86,7 @@ def leer_int(mensaje):
     except ValueError:
         raise ValueError("Entrada no válida")
 
-
-def menu_principal():
-    inventario = Inventario()
-
+def menu_principal(inventario):
     while True:
         print("\n1. Agregar producto")
         print("2. Buscar producto")
@@ -136,4 +133,5 @@ def menu_principal():
 
 
 if __name__ == "__main__":
-    menu_principal()
+    inventario = Inventario()
+    menu_principal(inventario)
